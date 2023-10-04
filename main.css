@@ -447,6 +447,7 @@ a.linkbutton:active {
 
 .footer .info-group .info:not(:first-child) {
   margin-left: 4px;
+  justify-content: space-between;
 }
 
 .footer-content {
@@ -733,7 +734,6 @@ span.avatar-name {
 
   .footer .info {
     margin-bottom: 12px;
-    justify-content: space-between;
   }
 
   .show-menu .nav {
