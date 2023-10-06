@@ -156,6 +156,29 @@ img {
   -webkit-user-drag: none;
 }
 
+#go-top {
+  z-index: 2;
+  position: fixed;
+  transform: rotate(-90deg) translateX(-100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 35px;
+  width: 35px;
+  font-size: 14px;
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  right: 20px;
+  bottom: 0;
+  transition: .3s;
+}
+
+#go-top.show {
+  transform: rotate(-90deg) translateX(100%);
+}
+
 .nav {
   display: flex;
   width: 100%;
