@@ -810,42 +810,21 @@
     <div class="footer-content need-padding">
       <div class="info-group"><a class="info" href="https://icp.gov.moe/?keyword=20231229" target="_blank">萌ICP备20231229号</a><a class="info" href="https://github.com/zhheo/HeoWeb" target="_blank">参考主题：HeoWeb 感谢所有开源的开发者的付出</a></div>
       <span class="info">Copyright © 2023 南秋SouthAki</span>
-      <script>
-        var now = new Date;
-        function createtime() {
-          now.setTime(now.getTime() + 1e3);
-          var e = new Date("07/22/2023 00:00:00"),
-            t = Math.trunc(234e8 + (now - e) / 1e3 * 17),
-            a = (t / 1496e5).toFixed(6),
-            n = new Date("07/22/2023 00:00:00"),
-            s = (now - n) / 1e3 / 60 / 60 / 24,
-            o = Math.floor(s),
-            r = (now - n) / 1e3 /
-            60 / 60 - 24 * o,
-            i = Math.floor(r);
-          1 == String(i).length && (i = "0" + i);
-          var l = (now - n) / 1e3 /
-            60 - 1440 * o - 60 * i,
-            b = Math.floor(l);
-          l == String(b).length && (b = "0" + b);
-          var d = (now - n) /
-            1e3 - 86400 * o - 3600 * i - 60 * b,
-            c = Math.round(d);
-          l == String(c).length && (c = "0" + c);
-          let g =
-            "";
-          g = i < 18 && i >= 9 ? `
-        <span class='textTip'><br><b>本站竟然运行了${o}天</span><span id='runtime'>${i}小时${b}分钟${c}秒</b></span><i id="heartbeat" class='fas fa-heartbeat' style='color:red'>
-        </i><br><b>旅行者一号当前距离地球${t}千米，约为${a}个天文单位🚀</b><br><b><font size=2px>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的每一个人
-        ，你听说过的每一个人，曾经有过的每一个人，都在上面度过他们的一生🌟</font></b>` : `<span class='textTip'><br><b>本站竟然运行了${o}天</span><span id='runtime'>${i}小时${b}分钟${c}秒</b></span><i id="heartbeat" class='fas fa-heartbeat' style='color:red'>
-        </i><br><b>旅行者一号当前距离地球${t}千米，约为${a}个天文单位🚀</b><br><b><font size=2px>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的每一个人
-        ，你听说过的每一个人，曾经有过的每一个人，都在上面度过他们的一生🌟</font></b>`, document.getElementById("workboard") && (document.getElementById(
-            "workboard").innerHTML = g)
-        }
-        setInterval((() => {
-          createtime()
-        }), 1e3);
-      </script>
+      <p id="RunTime" style="color:DarkGray;"></p>
+        <script>
+          var BootDate = new Date("2017/09/25 00:00:00");
+          function ShowRunTime(id) {
+          var NowDate = new Date();
+          var RunDateM = parseInt(NowDate - BootDate);
+          var RunDays = Math.floor(RunDateM/(24*3600*1000));
+          var RunHours = Math.floor(RunDateM%(24*3600*1000)/(3600*1000));
+          var RunMinutes = Math.floor(RunDateM%(24*3600*1000)%(3600*1000)/(60*1000));
+          var RunSeconds = Math.round(RunDateM%(24*3600*1000)%(3600*1000)%(60*1000)/1000);
+          var RunTime = RunDays + "天" + RunHours + "时" + RunMinutes + "分" + RunSeconds + "秒";
+          document.getElementById(id).innerHTML = "小俊博客在风风雨雨中勉勉强强已运行：" + RunTime;
+          }
+          setInterval("ShowRunTime('RunTime')", 1000);
+        </script>
     </div>
   </div>
 </body>
