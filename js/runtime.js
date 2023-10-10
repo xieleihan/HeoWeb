@@ -1,5 +1,4 @@
 var now = new Date;
-
 function createtime() {
 	now.setTime(now.getTime() + 1e3);
 	var e = new Date("07/22/2023 00:00:00"),
