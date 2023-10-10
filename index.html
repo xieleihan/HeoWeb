@@ -810,9 +810,9 @@
     <div class="footer-content need-padding">
       <div class="info-group"><a class="info" href="https://icp.gov.moe/?keyword=20231229" target="_blank">萌ICP备20231229号</a><a class="info" href="https://github.com/zhheo/HeoWeb" target="_blank">参考主题：HeoWeb 感谢所有开源的开发者的付出</a></div>
       <span class="info">Copyright © 2023 南秋SouthAki</span>
-      <p id="RunTime" style="color:DarkGray;"></p>
+      <p id="RunTime" class="info""></p>
         <script>
-          var BootDate = new Date("2017/09/25 00:00:00");
+          var BootDate = new Date("2023/09/25 00:00:00");
           function ShowRunTime(id) {
           var NowDate = new Date();
           var RunDateM = parseInt(NowDate - BootDate);
@@ -821,7 +821,7 @@
           var RunMinutes = Math.floor(RunDateM%(24*3600*1000)%(3600*1000)/(60*1000));
           var RunSeconds = Math.round(RunDateM%(24*3600*1000)%(3600*1000)%(60*1000)/1000);
           var RunTime = RunDays + "天" + RunHours + "时" + RunMinutes + "分" + RunSeconds + "秒";
-          document.getElementById(id).innerHTML = "小俊博客在风风雨雨中勉勉强强已运行：" + RunTime;
+          document.getElementById(id).innerHTML = "开始逐光之旅的第：" + RunTime + "天，愿在年少时期，你能路过我生命";
           }
           setInterval("ShowRunTime('RunTime')", 1000);
         </script>
