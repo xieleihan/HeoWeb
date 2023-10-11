@@ -439,7 +439,7 @@ a.linkbutton:active {
   color: var(--heo-fontcolor);
   transition: ease-in-out 0.3s;
   margin: 4px 0;
-  align-items: center;
+  text-align: center;
 }
 
 .footer a.info:hover {
